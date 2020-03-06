@@ -32,7 +32,42 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.feature {
+  position: relative;
+  width: calc(100% - 0 * 2 * 1px);
+  height: calc(100% - 0 * 2 * 1px);
+  margin: 0;
+  overflow: hidden;
+}
+
+.node {
+  position: absolute;
+  background: transparent url('') no-repeat 50% / cover;
+  overflow: hidden;
+  opacity: 0.8;
+  transition: opacity .8s;
+  cursor: pointer;
+}
+
+.level-0 {
+  z-index: 4;
+  display: none;
+}
+
+.level-1 {
+  z-index: 3
+}
+
+.level-2 {
+  z-index: 2
+}
+
+.level-3 {
+  z-index: 1
 }
