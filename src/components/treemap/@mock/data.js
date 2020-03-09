@@ -15,9 +15,11 @@ const getSubCategoryForCategory = id => {
     return splitKey[0] === id
   })
 
-  return filteredSubs.map(item => {
-    return { ...item, revenue: generateRandomRevenueNumber() }
-  })
+  return filteredSubs.map(item => ({
+    name: item[1],
+    key: item[0],
+    revenue: generateRandomRevenueNumber()
+  }))
 }
 
 const categories = Object.entries(CATEGORIES).map(category => {
